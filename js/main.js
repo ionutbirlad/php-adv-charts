@@ -1,12 +1,47 @@
 $(document).ready( () => {
 
-// -------------prova-------------
-  let arr = ["january"];
-  let arr2 = ["8"];
-// -------------prova-------------
+  let mesi = ['january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december'];
 
-  const grafico1 = new Grafico('primo-grafico', 'line', arr, arr2);
-  grafico1.creaGrafico();
+
+// --------------------------------------CHIAMATA AJAX--------------------------------------
+  $.ajax({
+    url: 'http://localhost:8889/Esercizi_Boolean/22-04-2020/php-adv-charts/server.php',
+    method: 'GET',
+    success: function (data) {
+      const grafico1 = new Grafico('primo-grafico', 'line', mesi, JSON.parse(data));
+      grafico1.creaGrafico();
+    },
+    error: function (err) {
+      alert("Qualcosa è andato storto!");
+    }
+  });
+// --------------------------------------CHIAMATA AJAX--------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // ------------------------------------CONSTRUCTOR GRAFICO------------------------------------
   function Grafico(DOM, tipologia, asseX, dati) {
