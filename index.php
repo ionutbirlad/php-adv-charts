@@ -28,6 +28,10 @@
       <canvas id="primo-grafico"></canvas>
     </div>
 
+    <div class="grafico">
+      <canvas id="secondo-grafico"></canvas>
+    </div>
+
     <script src="js/main.js" charset="utf-8"></script>
   </body>
 </html>
