@@ -21,13 +21,14 @@ $(document).ready( () => {
       // GRAFICO 2
       var agenti = [];
       var fatturati = [];
+
       for (var agente in dataGrafico2.fatturato_by_agent.data) {
         agenti.push(agente);
         fatturati.push(dataGrafico2.fatturato_by_agent.data[agente]);
       }
+      
       const graficoMilestone2 = new Grafico('secondo-grafico', dataGrafico2.fatturato_by_agent.type, agenti, fatturati, '#273c75', 'vendite');
       graficoMilestone2.creaGrafico();
-      console.log(dataGrafico2);
       // GRAFICO 2
     },
     error: function (err) {
