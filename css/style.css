@@ -23,8 +23,8 @@ html {
 body {
   margin:0;
   padding:0;
-    perspective: 1px;
-    transform-style: preserve-3d;
+  perspective: 1px;
+  transform-style: preserve-3d;
   height: 100%;
   overflow-y: scroll;
   overflow-x: hidden;
@@ -48,7 +48,7 @@ p {
   width: 100vw;
   box-sizing: border-box;
   box-shadow: 0 -1px 10px rgba(0, 0, 0, .7);
-    transform-style: inherit;
+  transform-style: inherit;
 }
 
 img {
@@ -111,7 +111,7 @@ img {
 }
 
 #title {
-  background-image: url("https://lorempixel.com/640/480/abstract/6/");
+  /* background-image: url("https://lorempixel.com/640/480/abstract/6/"); */
   z-index:2;
 }
 
@@ -122,21 +122,26 @@ img {
 
 }
 
+#slide1{
+  background: rgb(245,246,250);
+  background: linear-gradient(273deg, rgba(245,246,250,1) 0%, rgba(189,195,199,0.1) 66%);
+}
+
 #slide1:before {
   background: rgb(245,246,250);
-background: linear-gradient(103deg, rgba(245,246,250,1) 0%, rgba(52,73,94,1) 66%);
+  background: linear-gradient(103deg, rgba(245,246,250,1) 0%, rgba(189,195,199,0.1) 66%);
   transform: translateZ(-1px) scale(2);
 }
 
 #slide2 {
   background: rgb(245,246,250);
-  background: radial-gradient(circle, rgba(245,246,250,1) 0%, rgba(189,195,199,1) 66%);
+  background: radial-gradient(circle, rgba(245,246,250,1) 0%, rgba(189,195,199,0.1) 66%);
   z-index:2;
 }
 
 #slide3:before {
   background: rgb(245,246,250);
-background: linear-gradient(273deg, rgba(245,246,250,1) 0%, rgba(52,73,94,1) 66%);
+  background: linear-gradient(273deg, rgba(245,246,250,1) 0%, rgba(189,195,199,0.1) 66%);
   transform: translateZ(-1px) scale(2);
 }
 
