@@ -8,8 +8,8 @@ $(document).ready( () => {
     url: 'http://localhost:8889/Esercizi_Boolean/22-04-2020/php-adv-charts/server.php',
     method: 'GET',
     success: function (data) {
-      const grafico1 = new Grafico('primo-grafico', 'line', mesi, JSON.parse(data));
-      grafico1.creaGrafico();
+      const graficoMilestone1 = new Grafico('primo-grafico', 'line', mesi, JSON.parse(data), '#273c75', 'vendite');
+      graficoMilestone1.creaGrafico();
     },
     error: function (err) {
       alert("Qualcosa è andato storto!");
@@ -44,11 +44,13 @@ $(document).ready( () => {
 
 
 // ------------------------------------CONSTRUCTOR GRAFICO------------------------------------
-  function Grafico(DOM, tipologia, asseX, dati) {
+  function Grafico(DOM, tipologia, asseX, dati, colors, labelTitle) {
     this.DOM = DOM;
     this.tipologia = tipologia;
     this.asseX = asseX;
     this.dati = dati;
+    this.colors = colors;
+    this.labelTitle = labelTitle;
     this.creaGrafico = function () {
       var ctx = document.getElementById(this.DOM).getContext('2d');
       var chart = new Chart(ctx, {
@@ -59,9 +61,8 @@ $(document).ready( () => {
           data: {
               labels: this.asseX,
               datasets: [{
-                  label: 'My First dataset',
-                  backgroundColor: 'rgb(255, 99, 132)',
-                  borderColor: 'rgb(255, 99, 132)',
+                  label: this.labelTitle,
+                  backgroundColor: this.colors,
                   data: this.dati
               }]
           },
