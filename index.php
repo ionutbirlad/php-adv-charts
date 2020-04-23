@@ -24,53 +24,48 @@
   </head>
   <body>
 
-    <div class="parallax">
-    <div id="group1" class="parallax__group">
-      <div class="parallax__layer parallax__layer--base">
-        <div class="content">
-          <h2>Grafico milestone 1</h2>
+    <div id="title" class="slide header">
+      <h1>BoolChart</h1>
+    </div>
+
+    <div id="slide1" class="slide">
+      <div class="title">
+        <h1>Grafico milestone 1</h1>
+        <div class="grafico">
+          <canvas id="primo-grafico"></canvas>
+        </div>
+        <p>Qui come si può constatare abbiamo un grafico</p>
+      </div>
+      <img src="img/acaso1.jpg">
+      <!-- <img src="img/acaso2.jpg"> -->
+    </div>
+
+    <div id="slide2" class="slide">
+      <div class="title">
+        <h1>Grafici milestone 2</h1>
+        <div class="row">
           <div class="grafico">
-            <canvas id="primo-grafico"></canvas>
+            <canvas id="primo-grafico-m2"></canvas>
+          </div>
+          <div class="grafico">
+            <canvas id="secondo-grafico-m2"></canvas>
           </div>
         </div>
+        <p>Qui ne abbiamo addirittura 2</p>
+      </div>
+      <img src="img/acaso1.jpg">
+      <img src="img/acaso2.jpg">
+    </div>
+
+    <div id="slide3" class="slide">
+      <div class="title">
+        <h1>Slide 3</h1>
+        <p>Ed infine qui ci saranno ulteriori grafici</p>
       </div>
     </div>
-    <div id="group2" class="parallax__group">
-      <div class="parallax__layer parallax__layer--base">
-        <div class="content">
-          <h2>Grafici milestone 2</h2>
-          <div class="row">
-            <div class="grafico">
-              <canvas id="primo-grafico-m2"></canvas>
-            </div>
-            <div class="grafico">
-              <canvas id="secondo-grafico-m2"></canvas>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="parallax__layer parallax__layer--back">
-        <div class="content">Background Layer</div>
-      </div>
-    </div>
-    <div id="group3" class="parallax__group">
-      <div class="parallax__layer parallax__layer--fore">
-        <div class="content">Foreground Layer</div>
-      </div>
-      <div class="parallax__layer parallax__layer--base">
-        <div class="content">Base Layer</div>
-      </div>
-    </div>
-    <div id="group4" class="parallax__group">
-      <div class="parallax__layer parallax__layer--base">
-        <div class="content">Base Layer</div>
-      </div>
-      <div class="parallax__layer parallax__layer--back">
-        <div class="content">Background Layer</div>
-      </div>
-      <div class="parallax__layer parallax__layer--deep">
-        <div class="content">Deep Background Layer</div>
-      </div>
+
+    <div id="slide4" class="slide header">
+        <h1>The End</h1>
     </div>
 
 

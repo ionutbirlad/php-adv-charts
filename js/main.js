@@ -27,10 +27,10 @@ $(document).ready( () => {
         fatturati.push(dataGrafico2.fatturato_by_agent.data[agente]);
       }
 
-      const grafico1Milestone2 = new Grafico('primo-grafico-m2', dataGrafico2.fatturato_by_agent.type, agenti, fatturati, '#273c75', 'vendite');
+      const grafico1Milestone2 = new Grafico('primo-grafico-m2', dataGrafico2.fatturato_by_agent.type, agenti, fatturati, '#f1c40f', 'vendite');
       grafico1Milestone2.creaGrafico();
 
-      const grafico2Milestone2 = new Grafico('secondo-grafico-m2', dataGrafico2.fatturato.type, agenti, fatturati, '#273c75', 'vendite');
+      const grafico2Milestone2 = new Grafico('secondo-grafico-m2', dataGrafico2.fatturato.type, agenti, fatturati, '#f1c40f', 'vendite');
       grafico2Milestone2.creaGrafico();
       // MILESTONE 2
     },

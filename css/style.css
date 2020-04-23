@@ -15,110 +15,131 @@
   margin: 0 auto;
 }
 
-body, html {
-    overflow: hidden;
+html {
+  height: 100%;
+  overflow: hidden;
 }
 
 body {
-    font: 100% / 1.5 Arial;
-}
-
-.parallax {
-    font-size: 200%;
-}
-
-.parallax {
-  height: 500px; /* fallback for older browsers */
-  height: 100vh;
+  margin:0;
+  padding:0;
+    perspective: 1px;
+    transform-style: preserve-3d;
+  height: 100%;
+  overflow-y: scroll;
   overflow-x: hidden;
-  overflow-y: auto;
-  -webkit-perspective: 300px;
-  perspective: 300px;
+  font-family: Nunito;
 }
 
-.parallax__group {
+h1 {
+   font-size: 250%
+}
+
+p {
+  font-size: 140%;
+  line-height: 150%;
+  color: #333;
+}
+
+.slide {
   position: relative;
-  height: 500px; /* fallback for older browsers */
-  height: 100vh;
-  -webkit-transform-style: preserve-3d;
-  transform-style: preserve-3d;
+  padding: 25vh 10%;
+  min-height: 100vh;
+  width: 100vw;
+  box-sizing: border-box;
+  box-shadow: 0 -1px 10px rgba(0, 0, 0, .7);
+    transform-style: inherit;
 }
 
-.parallax__layer {
+img {
+  position: absolute;
+  top: 50%;
+  left: 35%;
+  width: 320px;
+  height: 240px;
+  transform: translateZ(.25px) scale(.75) translateX(-94%) translateY(-100%) rotate(2deg);
+  padding: 10px;
+  border-radius: 5px;
+  background: rgba(240,230,220, .7);
+  box-shadow: 0 0 8px rgba(0, 0, 0, .7);
+}
+
+#slide1 img:last-of-type {
+  transform: translateZ(.4px) scale(.6) translateX(104%) translateY(-60%) rotate(-5deg);
+}
+#slide2 img:last-of-type {
+  transform: translateZ(.4px) scale(.6) translateX(-104%) translateY(-40%) rotate(-5deg);
+}
+
+.slide:before {
+  content: "";
   position: absolute;
   top: 0;
+  bottom: 0;
   left: 0;
   right: 0;
-  bottom: 0;
+  box-shadow: 0 0 8px 1px rgba(0, 0, 0, .7);
 }
 
-.parallax__layer--fore {
-  -webkit-transform: translateZ(90px) scale(.7);
-  transform: translateZ(90px) scale(.7);
-  z-index: 1;
+.title {
+  width: 50%;
+  padding: 5%;
+  border-radius: 5px;
+  background: rgba(240,230,220, .7);
+  box-shadow: 0 0 8px rgba(0, 0, 0, .7);
 }
 
-.parallax__layer--base {
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-  z-index: 4;
+.slide:nth-child(2n) .title {
+  margin-left: 0;
+  margin-right: auto;
 }
 
-.parallax__layer--back {
-  -webkit-transform: translateZ(-300px) scale(2);
-  transform: translateZ(-300px) scale(2);
-  z-index: 3;
+.slide:nth-child(2n+1) .title {
+  margin-left: auto;
+  margin-right: 0;
 }
 
-.parallax__layer--deep {
-  -webkit-transform: translateZ(-600px) scale(3);
-  transform: translateZ(-600px) scale(3);
-  z-index: 2;
+.slide, .slide:before {
+  background: 50% 50% / cover;
 }
 
-
-/* Debugger styles - used to show the effect
---------------------------------------------- */
-
-.debug {
-  position: fixed;
-  top: 0;
-  left: .5em;
-  z-index: 999;
-  background: rgba(0,0,0,.85);
-  color: #fff;
-  padding: .5em;
-  border-radius: 0 0 5px 5px;
-}
-.debug-on .parallax__group {
-  -webkit-transform: translate3d(800px, 0, -800px) rotateY(30deg);
-  transform: translate3d(700px, 0, -800px) rotateY(30deg);
-}
-.debug-on .parallax__layer {
-  box-shadow: 0 0 0 2px #000;
-  opacity: 0.9;
-}
-.parallax__group {
-  -webkit-transition: -webkit-transform 0.5s;
-  transition: transform 0.5s;
-}
-
-.content {
-  padding-top: 50px;
+.header {
   text-align: center;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  font-size: 175%;
+  color: #fff;
+  text-shadow: 0 2px 2px #000;
 }
 
-.row{
-  display: flex;
-  align-items: center;
-  justify-content: center;
+#title {
+  background-image: url("https://lorempixel.com/640/480/abstract/6/");
+  z-index:2;
 }
 
-.grafico{
-  width: 600px;
+#title h1 {
+ /* transform: translateZ(.25px) scale(.75);
+ transform-origin: 50% 100%; */
+ color: #000000;
+
+}
+
+#slide1:before {
+  background: rgb(245,246,250);
+background: linear-gradient(103deg, rgba(245,246,250,1) 0%, rgba(52,73,94,1) 66%);
+  transform: translateZ(-1px) scale(2);
+}
+
+#slide2 {
+  background: rgb(245,246,250);
+  background: radial-gradient(circle, rgba(245,246,250,1) 0%, rgba(189,195,199,1) 66%);
+  z-index:2;
+}
+
+#slide3:before {
+  background: rgb(245,246,250);
+background: linear-gradient(273deg, rgba(245,246,250,1) 0%, rgba(52,73,94,1) 66%);
+  transform: translateZ(-1px) scale(2);
+}
+
+#slide4 {
+  background: #222;
 }
