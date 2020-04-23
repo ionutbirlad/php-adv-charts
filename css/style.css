@@ -109,18 +109,17 @@ img {
   font-size: 175%;
   color: #fff;
   text-shadow: 0 2px 2px #000;
+  background: #34495e;
+  padding: 10vh 10%;
 }
 
 #title {
-  /* background-image: url("https://lorempixel.com/640/480/abstract/6/"); */
   z-index:2;
 }
 
 #title h1 {
  /* transform: translateZ(.25px) scale(.75);
  transform-origin: 50% 100%; */
- color: #000000;
-
 }
 
 #slide1{
@@ -147,5 +146,21 @@ img {
 }
 
 #slide4 {
-  background: #222;
+  background: #34495e;
+}
+
+.text{
+  margin-top: 200px;
+  position: relative;
+  animation: entratas 0.5s 1;
+}
+@keyframes entratas {
+  from{
+    transform: translate(-300px);
+    opacity: 0;
+  }
+  to{
+    transform: translate(0px);
+    opacity: 1;
+  }
 }

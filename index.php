@@ -26,6 +26,9 @@
 
     <div id="title" class="slide header">
       <h1>BoolChart Data Science Lab</h1>
+      <div class="text">
+        Statistiche di qualità a portata di click
+      </div>
     </div>
 
     <div id="slide1" class="slide">
@@ -37,7 +40,6 @@
         <p>Qui come si può constatare abbiamo un grafico</p>
       </div>
       <img src="img/acaso1.jpg">
-      <!-- <img src="img/acaso2.jpg"> -->
     </div>
 
     <div id="slide2" class="slide">
