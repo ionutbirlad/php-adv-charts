@@ -13,12 +13,12 @@ $(document).ready( () => {
       var dataGrafico2 = JSON.parse(data).milestone2;
       var dataGrafico3 = JSON.parse(data).milestone3;
 
-      // GRAFICO 1
+      // MILESTONE 1
       const graficoMilestone1 = new Grafico('primo-grafico', 'line', mesi, dataGrafico1, '#273c75', 'vendite');
       graficoMilestone1.creaGrafico();
-      // GRAFICO 1
+      // MILESTONE 1
 
-      // GRAFICO 2
+      // MILESTONE 2
       var agenti = [];
       var fatturati = [];
 
@@ -26,10 +26,13 @@ $(document).ready( () => {
         agenti.push(agente);
         fatturati.push(dataGrafico2.fatturato_by_agent.data[agente]);
       }
-      
-      const graficoMilestone2 = new Grafico('secondo-grafico', dataGrafico2.fatturato_by_agent.type, agenti, fatturati, '#273c75', 'vendite');
-      graficoMilestone2.creaGrafico();
-      // GRAFICO 2
+
+      const grafico1Milestone2 = new Grafico('primo-grafico-m2', dataGrafico2.fatturato_by_agent.type, agenti, fatturati, '#273c75', 'vendite');
+      grafico1Milestone2.creaGrafico();
+
+      const grafico2Milestone2 = new Grafico('secondo-grafico-m2', dataGrafico2.fatturato.type, agenti, fatturati, '#273c75', 'vendite');
+      grafico2Milestone2.creaGrafico();
+      // MILESTONE 2
     },
     error: function (err) {
       alert("Qualcosa è andato storto!");

@@ -39,8 +39,13 @@
       <div class="parallax__layer parallax__layer--base">
         <div class="content">
           <h2>Grafici milestone 2</h2>
-          <div class="grafico">
-            <canvas id="secondo-grafico"></canvas>
+          <div class="row">
+            <div class="grafico">
+              <canvas id="primo-grafico-m2"></canvas>
+            </div>
+            <div class="grafico">
+              <canvas id="secondo-grafico-m2"></canvas>
+            </div>
           </div>
         </div>
       </div>
