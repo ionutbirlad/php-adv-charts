@@ -19,13 +19,13 @@
     <!-- <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css"> -->
     <!-- <script src="owlcarousel/owl.carousel.min.js"></script> -->
       <!-- OWL CAROUSEL -->
-    <!-- google font -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
     <!-- favicon -->
   </head>
   <body>
 
     <div id="title" class="slide header">
-      <h1>BoolChart</h1>
+      <h1>BoolChart Data Science Lab</h1>
     </div>
 
     <div id="slide1" class="slide">
