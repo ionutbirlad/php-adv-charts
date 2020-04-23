@@ -24,13 +24,50 @@
   </head>
   <body>
 
-    <div class="grafico">
-      <canvas id="primo-grafico"></canvas>
+    <div class="parallax">
+    <div id="group1" class="parallax__group">
+      <div class="parallax__layer parallax__layer--base">
+        <div class="content">
+          <h2>Grafico milestone 1</h2>
+          <div class="grafico">
+            <canvas id="primo-grafico"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="group2" class="parallax__group">
+      <div class="parallax__layer parallax__layer--base">
+        <div class="content">
+          <h2>Grafici milestone 2</h2>
+          <div class="grafico">
+            <canvas id="secondo-grafico"></canvas>
+          </div>
+        </div>
+      </div>
+      <div class="parallax__layer parallax__layer--back">
+        <div class="content">Background Layer</div>
+      </div>
+    </div>
+    <div id="group3" class="parallax__group">
+      <div class="parallax__layer parallax__layer--fore">
+        <div class="content">Foreground Layer</div>
+      </div>
+      <div class="parallax__layer parallax__layer--base">
+        <div class="content">Base Layer</div>
+      </div>
+    </div>
+    <div id="group4" class="parallax__group">
+      <div class="parallax__layer parallax__layer--base">
+        <div class="content">Base Layer</div>
+      </div>
+      <div class="parallax__layer parallax__layer--back">
+        <div class="content">Background Layer</div>
+      </div>
+      <div class="parallax__layer parallax__layer--deep">
+        <div class="content">Deep Background Layer</div>
+      </div>
     </div>
 
-    <div class="grafico">
-      <canvas id="secondo-grafico"></canvas>
-    </div>
 
     <script src="js/main.js" charset="utf-8"></script>
   </body>
