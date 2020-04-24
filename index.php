@@ -62,7 +62,17 @@
     <div id="slide3" class="slide">
       <div class="title">
         <h1>Slide 3</h1>
-        <p>Ed infine qui ci saranno ulteriori grafici</p>
+        <div class="row">
+          <div class="grafico">
+            <canvas id="primo-grafico-m3"></canvas>
+          </div>
+          <div class="grafico">
+            <canvas id="secondo-grafico-m3"></canvas>
+          </div>
+          <div class="grafico">
+            <canvas id="terzo-grafico-m3"></canvas>
+          </div>
+        </div>
       </div>
     </div>
 
