@@ -17,7 +17,7 @@ $(document).ready( () => {
       // MILESTONE 1
       var dts1_1 = [{
         label: 'vendite',
-        backgroundColor: '#273c75',
+        backgroundColor: '#c23616',
         data: dataGrafico1
       }];
       const graficoMilestone1 = new Grafico('primo-grafico', 'line', mesi, dts1_1);
@@ -29,7 +29,7 @@ $(document).ready( () => {
       var fatturati = [];
       var dts2_1 = [{
         label: 'vendite',
-        backgroundColor: '#273c75',
+        backgroundColor: '#fbc531',
         data: fatturati
       }];
 
@@ -48,7 +48,7 @@ $(document).ready( () => {
       // MILESTONE 3
       var dts3_1 = [{
         label: 'vendite',
-        backgroundColor: '#273c75',
+        backgroundColor: '#44bd32',
         data: dataGrafico3.fatturato.data
       }];
       const grafico1Milestone3 = new Grafico('primo-grafico-m3', dataGrafico3.fatturato.type, mesi, dts3_1);
@@ -64,7 +64,7 @@ $(document).ready( () => {
 
       var dts3_2 = [{
         label: 'vendite',
-        backgroundColor: '#273c75',
+        backgroundColor: '#44bd32',
         data: fatturati3_2
       }];
       const grafico2Milestone3 = new Grafico('secondo-grafico-m3', dataGrafico3.fatturato_by_agent.type, agenti, dts3_2);
@@ -72,17 +72,17 @@ $(document).ready( () => {
 
       var dts3_3 = [{
         label: 'vendite',
-        borderColor: '#273c75',
+        borderColor: '#44bd32',
         data: dataGrafico3.team_efficiency.data.Team1
       },
       {
         label: 'vendite',
-        borderColor: '#273c75',
+        borderColor: '#44bd32',
         data: dataGrafico3.team_efficiency.data.Team2
       },
       {
         label: 'vendite',
-        borderColor: '#273c75',
+        borderColor: '#44bd32',
         data: dataGrafico3.team_efficiency.data.Team3
       }
     ];
@@ -130,26 +130,28 @@ $(document).ready( () => {
     this.dts = dts;
     this.colors = colors;
     this.labelTitle = labelTitle;
-    this.creaGrafico = function () {
-      var ctx = document.getElementById(this.DOM).getContext('2d');
-      var chart = new Chart(ctx, {
-          // The type of chart we want to create
-          type: this.tipologia,
-
-          // The data for our dataset
-          data: {
-              labels: this.asseX,
-              datasets: this.dts
-          },
-
-          // Configuration options go here
-          options: {}
-      });
-    }
   }
 // ------------------------------------CONSTRUCTOR GRAFICO------------------------------------
 
 
+// --------------------------------------METODI GRAFICO--------------------------------------
+Grafico.prototype.creaGrafico = function () {
+  var ctx = document.getElementById(this.DOM).getContext('2d');
+  var chart = new Chart(ctx, {
+      // The type of chart we want to create
+      type: this.tipologia,
+
+      // The data for our dataset
+      data: {
+          labels: this.asseX,
+          datasets: this.dts
+      },
+
+      // Configuration options go here
+      options: {}
+  });
+};
+// --------------------------------------METODI GRAFICO--------------------------------------
 
 
 
