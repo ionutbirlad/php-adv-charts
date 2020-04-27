@@ -34,10 +34,10 @@
     <div id="slide1" class="slide">
       <div class="title">
         <h1>Grafico milestone 1</h1>
-        <div class="grafico">
-          <canvas id="primo-grafico"></canvas>
-        </div>
-        <p>Qui come si può constatare abbiamo un grafico</p>
+          <div class="grafico">
+            <canvas id="primo-grafico"></canvas>
+          </div>
+          <p>Qui come si può constatare abbiamo un grafico</p>
       </div>
       <img src="img/acaso1.jpg">
     </div>
@@ -63,15 +63,27 @@
       <div class="title">
         <h1>Slide 3</h1>
         <div class="row">
-          <div class="grafico">
-            <canvas id="primo-grafico-m3"></canvas>
-          </div>
-          <div class="grafico">
-            <canvas id="secondo-grafico-m3"></canvas>
-          </div>
-          <div class="grafico">
-            <canvas id="terzo-grafico-m3"></canvas>
-          </div>
+          <?php if (($_GET['level'] == "guest") || ($_GET['level'] == "employee") || ($_GET['level'] == "clevel")) { ?>
+            <div class="grafico">
+              <canvas id="primo-grafico-m3"></canvas>
+            </div>
+          <?php } else { ?>
+            <p>Non sei autorizzato a vedere questo contenuto</p>
+          <?php } ?>
+          <?php if (($_GET['level'] == "employee") || ($_GET['level'] == "clevel")) { ?>
+            <div class="grafico">
+              <canvas id="secondo-grafico-m3"></canvas>
+            </div>
+          <?php } else { ?>
+            <p>Non sei autorizzato a vedere questo contenuto</p>
+          <?php } ?>
+          <?php if (($_GET['level'] == "clevel")) { ?>
+            <div class="grafico">
+              <canvas id="terzo-grafico-m3"></canvas>
+            </div>
+          <?php } else { ?>
+            <p>Non sei autorizzato a vedere questo contenuto</p>
+          <?php } ?>
         </div>
       </div>
     </div>
